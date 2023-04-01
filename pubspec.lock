@@ -109,6 +109,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "10.4.0"
+  image_card:
+    dependency: "direct main"
+    description:
+      name: image_card
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.4"
   lints:
     dependency: transitive
     description:

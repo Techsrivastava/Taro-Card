@@ -32,7 +32,7 @@ class OtpPage extends StatelessWidget {
                 Positioned(
                   top: 0,
                   bottom: 200,
-                  left: 210,
+                  left: 250,
                   right: 0,
                   child: Opacity(
                     opacity: 0.7,
@@ -63,8 +63,8 @@ class OtpPage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.red,
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(60),
-                  topRight: Radius.circular(60),
+                  topLeft: Radius.circular(45),
+                  topRight: Radius.circular(45),
                 ),
               ),
               child: Padding(
