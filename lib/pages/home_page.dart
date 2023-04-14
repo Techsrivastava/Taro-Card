@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:image_card/image_card.dart';
+import 'package:taro_card/pages/taro_readers.dart';
 import 'package:taro_card/widget/header.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -260,13 +261,25 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   const Text(
                     'Recomended Taro Card Reader’s',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
-                  Row(
-                    children: const [
-                      Text('See all'),
-                      Icon(Icons.forward_outlined),
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>  const TaroCardReaders(),
+                          ));
+                    },
+                    child: SizedBox(
+                      height: 40,
+                      child: Row(
+                        children: const [
+                          Text('See all'),
+                          Icon(Icons.forward_outlined),
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -299,14 +312,12 @@ class MyHomePage extends StatelessWidget {
                                   radius: 100, //NetworkImage
                                 ),
                               ),
-                              const ActionChip(
-                                avatar: Icon(
-                                  Icons.star_border_sharp,
-                                  color: Colors.yellow,
-                                ),
-                                label: Text('5'),
+                             const  Chip(
+                                
+                                avatar: Icon(Icons.star),
                                 backgroundColor: Colors.white,
-                              ),
+                                label: Text('5'),
+                                ),
                               Text(
                                 'Astro Vivek K',
                                 style: TextStyle(
@@ -523,9 +534,9 @@ class MyHomePage extends StatelessWidget {
                             const SizedBox(
                               height: 15,
                             ),
-                            Container(
+                            const SizedBox(
                               width: 150,
-                              child: const Text(
+                              child: Text(
                                 'Astrology is a language, Ifyou want to understand this language ,speak to us !',
                                 softWrap: true,
                               ),
